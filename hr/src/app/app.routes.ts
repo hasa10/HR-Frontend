@@ -3,6 +3,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
 import { AllComponent } from './all/all.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 export const routes: Routes = [{
@@ -17,5 +18,8 @@ export const routes: Routes = [{
     },{
         path:"all",
         component:AllComponent
+    },{
+        path:"delete",
+        component:DeleteComponent
     }]
 }];
