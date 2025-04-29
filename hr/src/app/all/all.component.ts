@@ -10,14 +10,14 @@ import { Component } from '@angular/core';
 })
 export class AllComponent {
 
-  employee = <any>[];
+  employees = <any>[];
 
   constructor(private http:HttpClient){this.GetAll()}
 
 GetAll(){
   this.http.get("http://localhost:8080/api/employee/all").subscribe(response =>{
-    this.employee=response;
-    console.log(this.employee);
+    this.employees=response;
+    console.log(this.employees);
 })
 }
 }

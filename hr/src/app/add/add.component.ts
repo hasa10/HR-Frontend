@@ -15,12 +15,12 @@ AddEmployee = {
   email:'',
   department: '',
   createdAt: '',
-  updateAt: ''
+  updatedAt: ''
 }
 
 constructor(private http:HttpClient){}
 
-Save(){
+Save() {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!this.AddEmployee.name || !this.AddEmployee.email || !this.AddEmployee.department) {
@@ -32,13 +32,21 @@ Save(){
     alert('Please enter a valid email address');
     return;
   }
+
   console.log(this.AddEmployee);
-  
-this.http.post('http://localhost:8080/api/employee/add', this.AddEmployee).subscribe(response => {
-  alert(response); 
-}, error => {
-  alert("Error: " + error.error);
-});
+
+  this.http.post('http://localhost:8080/api/employee/add', this.AddEmployee, {
+    responseType: 'text'
+  }).subscribe({
+    next: (response: string) => {
+      alert(response);
+    },
+    error: (error) => {
+      alert(error.error);
+    }
+  });
 }
 
+
 }
+
