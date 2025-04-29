@@ -3,15 +3,16 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-delete',
+  selector: 'app-update',
   imports: [FormsModule],
-  templateUrl: './delete.component.html',
-  styleUrl: './delete.component.css'
+  templateUrl: './update.component.html',
+  styleUrl: './update.component.css'
 })
-export class DeleteComponent {
+export class UpdateComponent {
+
   id:string='';
 
-  DeleteEmployee = {
+  UpdateEmployee = {
     id:this.id,
     name:'',
     email:'',
@@ -22,19 +23,19 @@ export class DeleteComponent {
   
   constructor(private http:HttpClient){}
   
-  Delete(){
-    console.log(this.DeleteEmployee);
+  Update(){
+    console.log(this.UpdateEmployee);
     
-    this.http.delete<any>(`http://localhost:8080/api/employee/delete?id=${this.id}`).subscribe(response =>{
-    console.log("Employee Deleted Successfully" , response); 
-    alert("Employee Deleted Successfully")
+  this.http.put('http://localhost:8080/api/employee/update',this.UpdateEmployee).subscribe(response =>{
+    console.log("Employee Updated Successfully" , response); 
+    alert("Employee Updated Successfully")
   },
-    error => console.error("Error Deleting Customer",error)
+    error => console.error("Error Updating Employee",error)
   )
   }
   Search(){
   this.http.get<any>(`http://localhost:8080/api/employee/search?id=${this.id}`).subscribe(response =>{
-    this.DeleteEmployee = {
+    this.UpdateEmployee= {
       id:response.id,
       name: response.name,
       email: response.email,

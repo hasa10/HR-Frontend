@@ -7,37 +7,37 @@
     </div>
     <div class="mb-5">
         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Name</label>
-        <input type="text" id="name" [(ngModel)]="DeleteEmployee.name" name="name"
+        <input type="text" id="name" [(ngModel)]="UpdateEmployee.name" name="name"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required />
     </div>
     <div class="mb-5">
         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Email</label>
-        <input type="text" id="email" [(ngModel)]="DeleteEmployee.email" name="email"
+        <input type="text" id="email" [(ngModel)]="UpdateEmployee.email" name="email"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required />
     </div>
     <div class="mb-5">
         <label for="department" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Department</label>
-        <input type="text" id="department" [(ngModel)]="DeleteEmployee.department" name="department"
+        <input type="text" id="department" [(ngModel)]="UpdateEmployee.department" name="department"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required />
     </div>
     <div class="mb-5">
         <label for="createdAt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">CreatedAt</label>
-        <input type="text" id="createdAt" [(ngModel)]="DeleteEmployee.createdAt" name="createdAt"
+        <input type="text" id="createdAt" [(ngModel)]="UpdateEmployee.createdAt" name="createdAt"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required />
     </div>
     <div class="mb-5">
         <label for="updateAt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">UpdateAt</label>
-        <input type="text" id="updateAt" [(ngModel)]="DeleteEmployee.updateAt" name="updateAt"
+        <input type="text" id="updateAt" [(ngModel)]="UpdateEmployee.updateAt" name="updateAt"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required />
     </div>
     <div class="flex justify-center">
       <button type="submit"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="background-color: #8e44ad;" (click)="Delete()">Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="background-color: #8e44ad;" (click)="Update()">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button type="submit"
       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="background-color: #8e44ad;" (click)="Search()">Search</button>
     </div>
