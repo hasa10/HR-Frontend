@@ -34,12 +34,11 @@ Save(){
   }
   console.log(this.AddEmployee);
   
-this.http.post('http://localhost:8080/api/employee/add',this.AddEmployee).subscribe(response =>{
-  console.log("Employee Added Successfully" , response);
-  alert("Employee Added Successfully")
-},
-  error => console.error("Error Adding Customer",error)
-)
+this.http.post('http://localhost:8080/api/employee/add', this.AddEmployee).subscribe(response => {
+  alert(response); 
+}, error => {
+  alert("Error: " + error.error);
+});
 }
 
 }
