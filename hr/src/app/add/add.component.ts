@@ -21,6 +21,17 @@ AddEmployee = {
 constructor(private http:HttpClient){}
 
 Save(){
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!this.AddEmployee.name || !this.AddEmployee.email || !this.AddEmployee.department) {
+    alert('Please fill all required fields');
+    return;
+  }
+
+  if (!emailPattern.test(this.AddEmployee.email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
   console.log(this.AddEmployee);
   
 this.http.post('http://localhost:8080/api/employee/add',this.AddEmployee).subscribe(response =>{
